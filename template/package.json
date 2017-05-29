@@ -1,8 +1,8 @@
 {
-  "name": "projectname",
+  "name": "{{name}}",
   "version": "0.0.1",
-  "description": "projectdescription",
-  "author": "projectauthor",
+  "description": "{{description}}",
+  "author": "{{author}}",
   "private": true,
   "scripts": {
     "dev": "node build/dev-server.js",
