@@ -1,8 +1,14 @@
+<p align="center">
+    <img src="https://github.com/projecao/ng-webpack-template/blob/master/media/app.png"/>
+</p>
+
 # ng-webpack-template
 
 > A full-featured Webpack setup with hot-reload, lint-on-save & css extraction.
 
 > This template is Angular 1.6.+ compatible. Inspired by [vuejs-templates](https://github.com/vuejs-templates).
+
+
 
 ## Usage
 
