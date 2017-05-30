@@ -1,7 +1,3 @@
-<p align="center">
-    <img src="https://github.com/projecao/ng-webpack-template/blob/master/media/app.png"/>
-</p>
-
 # ng-webpack-template
 
 > A full-featured Webpack setup with hot-reload, lint-on-save & css extraction.
@@ -21,6 +17,10 @@ $ cd my-project
 $ npm install
 $ npm run dev
 ```
+
+<p align="center">
+    <img src="https://github.com/projecao/ng-webpack-template/blob/master/media/app.png"/>
+</p>
 
 ## License
 
