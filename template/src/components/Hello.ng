@@ -24,6 +24,6 @@ export default {
 }
 h1, h2 {
   font-weight: normal;
-  color: #032a51;
+  color: #828282;
 }
 </style>
