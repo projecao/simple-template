@@ -10,7 +10,7 @@ export default {
   controller: class HelloCtrl {
 
     $onInit () {
-      this.msg = 'Welcome to Your Angular.js App'
+      this.msg = 'Bem vindo! Seu aplicativo foi construido com sucesso.'
     }
 
   }

@@ -1,19 +1,17 @@
+import angular from 'angular'
 
-import * as angular from 'angular'
-import 'angular-ui-router'
+import app from '@/App'
+import core from '@/core'
+import modules from '@/modules'
+import services from '@/services'
+import components from '@/components'
 
-import app from './App'
+angular.module('app', [
+    core,
+    modules,
+    services,
+    components
+])
+.components( { app } )
 
-angular.module('app', ['ui.router'])
-.components( { app })
-.config(['$stateProvider', ({ state }) => {
-
-    state('app', {
-        url: '',
-        component: 'app'
-    })
-
-}]);
-
-// bootstrap aplication
-angular.bootstrap(document.getElementById('app'), ['app'])
+angular.bootstrap(document, ['app'])

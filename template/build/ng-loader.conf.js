@@ -4,6 +4,7 @@ var isProduction = process.env.NODE_ENV === 'production'
 
 module.exports = {
   replace: true,
+	hijacked: true,
   loaders: utils.cssLoaders({
     sourceMap: isProduction
       ? config.build.productionSourceMap

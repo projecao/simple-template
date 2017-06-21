@@ -9,11 +9,12 @@
       "type": "string",
       "required": true,
       "label": "Project description",
-      "default": "A Angular.js + ui.router project"
+      "default": "Um projeto Grupo Projeção"
     },
     "author": {
       "type": "string",
-      "label": "Author"
+      "label": "Author",
+      "default": "Núcleo de Desenvolvimento de Sistemas - DTI"
     }
   }
 }

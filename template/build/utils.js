@@ -55,6 +55,16 @@ exports.cssLoaders = function (options) {
   }
 }
 
+exports.loaders = function (options) {
+	var cssLoaders = exports.cssLoaders(options);
+
+	Object.keys(cssLoaders).forEach(function(key){
+		loaders[key] = cssLoaders[key]
+	})
+
+	return loaders
+}
+
 exports.styleLoaders = function (options) {
   var output = []
   var loaders = exports.cssLoaders(options)

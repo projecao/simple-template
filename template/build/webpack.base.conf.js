@@ -9,7 +9,7 @@ function resolve (dir) {
 
 module.exports = {
   entry: {
-    app: './src/main.js'
+    app: resolve("src/main.js")
   },
   output: {
     path: config.build.assetsRoot,
@@ -21,37 +21,49 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.ng', '.json'],
     alias: {
-      '@': resolve('src')
+      '@': resolve('src'),
+      'assets': resolve('src/assets'),
+      'core': resolve('src/core'),
+      'components': resolve('src/components'),
+      'modules': resolve('src/modules'),
+      'services': resolve('src/services')
     }
   },
   module: {
     rules: [
-      {
-        test: /\.ng$/,
-        loader: 'ng-loader',
-        options: ngLoaderConfig
-      },
-      {
-        test: /\.js$/,
-        loader: 'babel-loader',
-        include: [resolve('src'), resolve('test')]
-      },
-      {
-        test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
-        loader: 'url-loader',
-        options: {
-          limit: 10000,
-          name: utils.assetsPath('img/[name].[hash:7].[ext]')
+        {
+            test: /\.ng$/,
+            loader: 'ng-loader',
+            options: ngLoaderConfig
+        },
+        {
+            test: /\.js$/,
+            loader: 'babel-loader',
+            include: [resolve('src'), resolve('test')]
+        },
+        {
+            test: /\.html$/,
+            loader: 'html-loader',
+            query: {
+                minimize: true
+            }
+        },
+        {
+            test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
+            loader: 'url-loader',
+            options: {
+                limit: 10000,
+                name: utils.assetsPath('img/[name].[hash:7].[ext]')
+            }
+        },
+        {
+            test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
+            loader: 'url-loader',
+            options: {
+                limit: 10000,
+                name: utils.assetsPath('fonts/[name].[hash:7].[ext]')
+            }
         }
-      },
-      {
-        test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
-        loader: 'url-loader',
-        options: {
-          limit: 10000,
-          name: utils.assetsPath('fonts/[name].[hash:7].[ext]')
-        }
-      }
     ]
   }
 }
